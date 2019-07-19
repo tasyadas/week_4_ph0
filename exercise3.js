@@ -1,13 +1,11 @@
 function cariMedian(arr) {
-    // for (var i = 0; i<arr.length; i++){
-        if ( arr.length % 2 !== 0) {
-            var index = Math.ceil(arr.length / 2) - 1;
-            return arr[index];
-        } else {
-            var index = (arr.length / 2) - 1;
-            return ( arr[index] + arr[index + 1]) / 2;
-        }
-    // }
+    if ( arr.length % 2 !== 0) {
+        var index = Math.ceil(arr.length / 2) - 1;
+        return arr[index];
+    } else {
+        var index = (arr.length / 2) - 1;
+        return ( arr[index] + arr[index + 1]) / 2;
+    }
 }
   
   // TEST CASES
