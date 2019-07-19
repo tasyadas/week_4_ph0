@@ -5,7 +5,11 @@ function ubahHuruf(kata) {
     for (var i = 0; i < kata.length; i++){
         for ( var j = 0; j < abc.length; j++){
             if ( kata[i] == abc[j]) {
-                ubah += abc[j + 1];
+                if (kata[i] == 'z') {
+                    ubah += abc[0]
+                } else {
+                    ubah += abc[j + 1];
+                }
             }
         }
     }
