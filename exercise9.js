@@ -1,17 +1,16 @@
 function checkAB(num) {
-    var cek = false
     for ( var i = 0; i < num.length; i++){
-        for ( var j = 0; j < num.length; j++){
-            if (num[i] == 'a' || num[i] == 'b') {
-                if (num[j] == 'b' || num[j] == 'a') {
-                    if ( ((j-1) - i) === 3) {
-                        cek = true;
-                    }
-                }
+        if (num[i] == 'a') {
+            if ( num[i + 4] == 'b') {
+                return true;
+            }
+        } else if (num[i] == 'b') {
+            if ( num[i + 4] == 'a') {
+                return true;
             }
         }
     }
-    return cek;
+    return false;
 }
   
   // TEST CASES
